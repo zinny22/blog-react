@@ -1,5 +1,12 @@
+import Page from "../../components/common/Pgae";
+import PostList from "../../components/PostList";
+
 function PostsPage() {
-  return <h1>POST LIST PAGE</h1>;
+  return (
+    <Page>
+      <PostList showNavigation={false} />
+    </Page>
+  );
 }
 
 export default PostsPage;

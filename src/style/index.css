@@ -16,25 +16,34 @@ code {
 header {
   display: flex;
   justify-content: space-between;
-  flex-direction: row-reverse;
   border-bottom: 1px solid #f2f2f2;
   padding: 10px 40px;
   min-height: 40px;
   align-items: center;
 }
 
-header a {
+header .header_logo {
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+  font-weight: 800;
+}
+
+header .header_menu,
+footer a {
   padding: 8px 10px;
   text-decoration: none;
   color: gray;
   border-radius: 30px;
 }
 
-header a:focus {
+header .header_menu:focus,
+footer a:focus {
   color: black;
 }
 
-header a:hover {
+header .header_menu:hover,
+footer a:hover {
   background-color: #f2f2f2;
   color: black;
   transition: background-color, color 0.7s;
@@ -54,8 +63,117 @@ footer {
 }
 
 /*post-list*/
-.post-list {
+.post-list,
+.post-detail {
   min-height: 90vh;
   padding: 20px 40px;
   text-align: center;
+}
+
+.post-navigation {
+  display: flex;
+  column-gap: 30px;
+  border-bottom: 1px solid #f2f2f2;
+  padding: 20px 0px;
+  max-width: 620px;
+  margin: 0px auto;
+  color: gray;
+  cursor: pointer;
+}
+
+.post-navigation__active {
+  font-weight: 700;
+  color: black;
+}
+
+.post-list a {
+  text-decoration: none;
+  color: black;
+}
+
+.post-box {
+  display: grid;
+  row-gap: 20px;
+  border-bottom: 1px solid #f2f2f2;
+  max-width: 620px;
+  margin: 0px auto;
+  text-align: left;
+  padding: 20px 0px;
+}
+
+.post-profile {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.post-profile_image {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+}
+
+.post-profile_userName,
+.post-profile_date {
+  color: gray;
+  font-size: 14px;
+}
+
+.post {
+  display: grid;
+  row-gap: 16px;
+}
+
+.post_title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.post_content {
+  font-size: 18px;
+  font-weight: 300;
+  color: grey;
+}
+
+.post-edit {
+  display: flex;
+  column-gap: 8px;
+  flex-direction: row-reverse;
+}
+
+.post-edit_edit,
+.post-edit_delete {
+  background-color: none;
+  border: none;
+  font-size: 14px;
+  color: cadetblue;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/*post-detail*/
+.post-detail-box {
+  max-width: 620px;
+  margin: 0px auto;
+  text-align: left;
+}
+
+.post-detail-box .post_title {
+  font-size: 36px;
+  font-weight: 800;
+  padding: 20px 0px;
+}
+
+.post-detail .post-profile {
+  padding: 10px 0px;
+}
+
+.post-detail .post-profile_userName {
+  color: black;
+}
+
+.post-detail .post_content {
+  color: black;
+  padding: 20px 0px;
 }
